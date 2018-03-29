@@ -1,5 +1,7 @@
 package _01_introduction_to_encapsulation;
 
+import java.awt.Window.Type;
+
 /*
  * Encapsulation is a way of protecting the data in a class from being
  * unintentionally altered from another class.
@@ -31,32 +33,48 @@ public class EncapsulateTheData {
 
 	}
 
-	public void getitemsReceived() {
-
+	public int getitemsReceived() {
+		return itemsReceived;
 	}
 
-	public void setitemsReceived() {
+	public void setitemsReceived(int itemsReceived) {
+		if (itemsReceived < 0) {
+			itemsReceived = 0;
+		} else {
+		}
 	}
 
-	public void getdegreesTurned() {
-
+	public float getdegreesTurned() {
+		return degreesTurned;
 	}
 
-	public void setdegreesTurned() {
+	public void setdegreesTurned(float degreesTurned) {
+		if (degreesTurned < 0) {
+			degreesTurned = 0;
+		}
+		if (degreesTurned > 360) {
+			degreesTurned = 360;
+		} else {
+		}
 	}
 
-	public void getnomenclature() {
-
+	public String getnomenclature() {
+		return nomenclature;
 	}
 
-	public void setnomenclature() {
+	public void setnomenclature(String nomenclature) {
+		if (nomenclature.equals("")) {
+			nomenclature = " ";
+		}
 	}
 
-	public void getmemberObj() {
-
+	public Object getmemberObj() {
+		return memberObj;
 	}
 
-	public void setmemberObj() {
+	public void setmemberObj(Object memberObj) {
+		if (memberObj instanceof String == true) {
+			memberObj = (Object) memberObj;
+		}
 	}
-
 }
