@@ -16,5 +16,11 @@ public class MovingMorph extends Polymorph {
 		g.setColor(Color.green);
 		g.fillRect(getx(), gety(), getwidth(), getheight());
 	}
+	public void update() {
+	setx(getx()+1);
+	sety(gety()+1);
+	}
+
+	
 
 }

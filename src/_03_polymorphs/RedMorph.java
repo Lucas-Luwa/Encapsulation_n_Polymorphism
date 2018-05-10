@@ -15,5 +15,7 @@ public class RedMorph extends Polymorph {
 		g.setColor(Color.red);
 		g.fillRect(getx(), gety(), getwidth(), getheight());
 	}
-
+	public void update() {
+		
+	}
 }

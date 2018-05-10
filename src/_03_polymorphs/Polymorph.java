@@ -32,8 +32,7 @@ public abstract class Polymorph {
 	}
 
 	public void update() {
-		x += 1;
-		y += 1;
+
 	}
 
 	public int getwidth() {

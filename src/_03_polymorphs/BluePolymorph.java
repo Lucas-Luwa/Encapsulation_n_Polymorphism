@@ -7,6 +7,7 @@ public class BluePolymorph extends Polymorph {
 
 	BluePolymorph(int x, int y, int width, int height) {
 		super(x, y, width, height);
+	
 	}
 
 	@Override
@@ -14,5 +15,7 @@ public class BluePolymorph extends Polymorph {
 		g.setColor(Color.blue);
 		g.fillRect(getx(), gety(), getwidth(), getheight());
 	}
-
+	public void update() {
+		
+	}
 }
