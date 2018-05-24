@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class CircleMorph extends Polymorph {
-double theta = 0;
+	double theta = 0;
 
 	CircleMorph(int x, int y, int width, int height) {
 		super(x, y, width, height);
@@ -19,9 +19,11 @@ double theta = 0;
 	}
 
 	public void update() {
-		setx(getx() + 20*cos(theta));
-		sety();
-		double newtheta = theta + 10;
+		theta += 10;
+		int xval = (int) (getx() + 20 * cos(theta));
+		int yval = (int) (gety() + 20 * sin(theta));
+		setx(xval);
+		sety(yval);
 
 	}
 

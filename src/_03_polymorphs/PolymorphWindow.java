@@ -33,10 +33,18 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		window.setVisible(true);
 		timer = new Timer(1000 / 30, this);
 		arraypoly.add(new MovingMorph(10, 10, 20, 20));
-		
+
 		arraypoly.add(new BluePolymorph(5, 80, 10, 10));
 		arraypoly.add(new RedMorph(80, 90, 10, 10));
-		arraypoly.add(new CircleMorph(300, 200, 10, 10));
+		arraypoly.add(new CircleMorph(200, 200, 10, 10));
+		MouseMorph mos = new MouseMorph(400, 200, 10, 10);
+		window.addMouseMotionListener(mos);
+		arraypoly.add(mos);
+		arraypoly.add(new ImageMorph(400, 400, 50, 50));
+		DialogMorph dm = new DialogMorph(300,300,20,20);
+		window.addMouseListener(dm);
+		arraypoly.add(dm);
+
 		timer.start();
 	}
 
@@ -47,7 +55,7 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		for (Polymorph object : arraypoly) {
 			object.draw(g);
 		}
-		
+
 	}
 
 	@Override
@@ -55,9 +63,7 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		repaint();
 		for (Polymorph object : arraypoly) {
 			object.update();
-		
-			
-			
+
 		}
 	}
 }
