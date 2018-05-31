@@ -41,7 +41,7 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		window.addMouseMotionListener(mos);
 		arraypoly.add(mos);
 		arraypoly.add(new ImageMorph(400, 400, 50, 50));
-		DialogMorph dm = new DialogMorph(300,300,20,20);
+		DialogMorph dm = new DialogMorph(300, 300, 20, 20);
 		window.addMouseListener(dm);
 		arraypoly.add(dm);
 
