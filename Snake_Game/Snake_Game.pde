@@ -46,6 +46,7 @@ void draw() {
   drawSnake();
   move();
   collision();
+  bodyCollision();
 }
 // 13. Complete the drawFood method below. (Hint: each piece of food should be a 10 by 10 rectangle).
 void drawFood() {
@@ -76,7 +77,6 @@ void move() {
     snakehead = new Segment(snakehead.getx()+10, snakehead.gety());
     break;
   }
-  System.out.println(direction);
   // 17. Call the checkBoundaries method to make sure the snake doesn't go off the screen.
   checkBoundaries();
 }
@@ -135,19 +135,26 @@ void drawTail() {
   // Add your head to your ArrayList
   tail.add(snakehead);
   // Draw a 10 by 10 rectangle for each Segment in your snake ArrayList.
-  for(int i = 0; i < tail.size(); i++){
-   rect(tail.get(i).x, tail.get(i).y, 10, 10);
+  for (int i = 0; i < tail.size(); i++) {
+    rect(tail.get(i).x, tail.get(i).y, 10, 10);
   }
 
   // While the snake size is greater than your food, remove the first Segment in your snake.
-  if(tail.size() > piecesoffood){
+  while (tail.size() > piecesoffood) {
     tail.remove(0);
   }
 }
 
 // 3. Complete the missing parts of the bodyCollision method below.
 void bodyCollision() {
-  // If different segments have the same location...
-  // Set food back to 3.
-  
+  for (int i = 0; i < tail.size()-1; i++) {
+    for (int y = i+1; y < tail.size(); y++) {
+      if (tail.get(i).x == tail.get(y).x && tail.get(i).y == tail.get(y).y) {
+        piecesoffood = 3;
+        System.out.println(piecesoffood);
+      }
+    }
+  }
 }
+// If different segments have the same location...
+// Set food back to 3.
