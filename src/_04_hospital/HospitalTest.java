@@ -1,37 +1,37 @@
-//package _04_hospital;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//import org.junit.jupiter.api.Test;
-//
-//import java.util.List;
-//
-//import junit.framework.TestCase;
-//
-///* requirements:
-// * 1. hospital has doctors and patients
-// * 2. doctors can be GeneralPractictioner or Surgeon
-// * 3. patients can be assigned to doctors
-// * 4. doctors can have no more than 3 patients
-// */
-//
-//public class HospitalTest extends TestCase {
-//
-//	Hospital testHospital = new Hospital();
-//
-//	public void testAddDoctor() {
-//		testHospital.addDoctor(new GeneralPractitioner());
-//		testHospital.addDoctor(new GeneralPractitioner());
-//		testHospital.addDoctor(new Surgeon());
-//		assertEquals(3, testHospital.getDoctors().size());
+package _04_hospital;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+import junit.framework.TestCase;
+
+/* requirements:
+ * 1. hospital has doctors and patients
+ * 2. doctors can be GeneralPractictioner or Surgeon
+ * 3. patients can be assigned to doctors
+ * 4. doctors can have no more than 3 patients
+ */
+
+public class HospitalTest extends TestCase {
+
+	Hospital testHospital = new Hospital();
+
+	public void testAddDoctor() {
+		testHospital.addDoctor(new GeneralPractitioner());
+		testHospital.addDoctor(new GeneralPractitioner());
+		testHospital.addDoctor(new Surgeon());
+		assertEquals(3, ( testHospital.getDoctors()).size());
+	}
+
+//	public void testAddPatient() throws Exception {
+//		testHospital.addPatient(new Patient());
+//		testHospital.addPatient(new Patient());
+//		testHospital.addPatient(new Patient());
+//		assertEquals(3, testHospital.getPatients().size());
 //	}
-//
-////	public void testAddPatient() throws Exception {
-////		testHospital.addPatient(new Patient());
-////		testHospital.addPatient(new Patient());
-////		testHospital.addPatient(new Patient());
-////		assertEquals(3, testHospital.getPatients().size());
-////	}
 //
 //	/* Fix asserts one at a time */
 //	public void testDoctorsHaveSpecialties() throws Exception {
@@ -108,7 +108,7 @@
 //		assertEquals(3, testDoctors.get(1).getPatients().size());
 //		assertEquals(2, testDoctors.get(2).getPatients().size());
 //	}
+//
 
 
-
-//}
+}
