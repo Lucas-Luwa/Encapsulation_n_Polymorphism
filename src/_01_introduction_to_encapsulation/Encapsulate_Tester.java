@@ -1,10 +1,8 @@
-package _04_hospital;
+package _01_introduction_to_encapsulation;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
-import _01_introduction_to_encapsulation.EncapsulateTheData;
 
 public class Encapsulate_Tester {
 	EncapsulateTheData ETD = new EncapsulateTheData();
